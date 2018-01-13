@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
 	<title>一个简单的小网页</title>
 	<link rel="stylesheet" type="text/css" href="./html.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<header class="head bg-orange">
@@ -14,15 +17,50 @@
 	</header>
 	<div class="body center-width">
 		<section class="image">
-			图片模块
+			<section class="banner">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515839832877&di=7fdabd245cec1492069f3c4535227713&imgtype=0&src=http%3A%2F%2Fs7.sinaimg.cn%2Fmw690%2F001HDQ9Xgy72qnSV6Lkc6%26690" alt="">
+				<p class="my-world">
+					<span>我，你，世界</span><br/><span class="small-size">This is a pure world of my own</span>
+				</p>
+			</section>
+			<section class="img-list">
+				<img src="http://wenwen.soso.com/p/20100808/20100808233046-1173350207.jpg" alt="">
+				<img src="http://d.hiphotos.baidu.com/zhidao/pic/item/72f082025aafa40fe871b36bad64034f79f019d4.jpg" alt="">
+				<img src="http://g.hiphotos.baidu.com/zhidao/pic/item/9c16fdfaaf51f3dea206f89f93eef01f3b297990.jpg" alt="">
+			</section>
 		</section>
 		<section class="article">
-			文章模块
+			<article class="article-content">
+				<h1>minecraft</h1>
+				<p>《minecraft》（《我的世界》）是一款风靡全球的高自由度沙盒游戏，由瑞典Mojang AB和4J Studios开发，于2009年5月13日发行。2014年11月6日，该游戏被微软收购。2016年网易取得了该游戏在中国的代理权。</p>
+				<p>《凉宫春日系列》是由日本小说家谷川流撰写、插画师伊东杂音负责插画的轻小说系列。小说的各卷标题均为《凉宫春日的××》（××可用两个汉字代入），内容是以凉宫春日为中心的SOS团及成员的冒险故事。系列小说自2003年推出以来便深受日本青少年的喜爱，多次被改编成电视动画、动画电影、漫画及各类型的游戏。</p>
+				<p>《Angel Beats!》（日文：エンジェルビーツ，台湾译名：天使的脉动）是由Key、ANIPLEX、电击G's magazine合作的包括动画、漫画等一系列相关作品的企划。动画由P.A.WORKS制作，于2010年4月开始播放，其中本篇共13话，DVD收录特别篇“ANOTHER EPILOGUE”1话，特别篇“SPECIAL EPISODE”1话，Blu-ray BOX收录的特别篇“Hell's Kitchen”1话。</p>
+				<footer>
+					<p>——随意制作的网站</p>
+					<p>感谢斌叔</p>
+				</footer>
+			</article>
 		</section>
 	</div>
 	<footer class=" footer bg-orange">
 		页脚
 	</footer>
-
+	<script type="text/javascript">
+		$('.head .center-width a').click(function() {
+			var this_ = $(this);
+			if (!this_.hasClass('active')) {
+				$('.head .center-width .active').removeClass('active');
+				this_.addClass('active');
+				if (this_.hasClass('nav-picture')){
+					$('.body .article').hide();
+					$('.body .image').show();
+				}
+				else {
+					$('.body .image').hide();
+					$('.body .article').show();
+				}
+			}
+		});
+	</script>
 </body>
 </html>
