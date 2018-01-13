@@ -59,3 +59,75 @@ body{
 .head > nav a.active:hover{
 	color: #ffa366;
 }
+/*页眉部分*/
+/*图片模块*/
+img{
+	width: 100%;
+	height: auto;
+}
+.image .banner{
+	padding: 30px 60px;
+	position: relative;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 30px;
+}
+.my-world{
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #fefefe;
+	font-size: 36px;
+	font-family: cursive;
+}
+.small-size{
+	font-size: 18px;
+}
+.img-list{
+	padding-bottom: 30px;
+}
+
+/*改变图片列表大小*/
+.img-list > img{
+	width: 20%;
+	float: left;
+	margin-left: 10%;
+}
+.img-list::after{
+	content: "\20";
+	display: block;
+	clear: both;
+}
+/*图片模块*/
+
+/*文章模块*/
+.article{
+	font-family: cursive;
+	display: none;
+}
+.article h1{
+	text-align: center;
+	line-height: 50px;
+	color: #444;
+	font-size: 20px;
+}
+.article p{
+	padding: 0 120px;
+	letter-spacing: 1px;
+	line-height: 24px;
+	text-indent: 32px;
+	margin-bottom: 16px;
+}
+.article p:last-child{
+	margin-bottom: 0;
+}
+.article-content img{
+	width: 50%;
+	margin-left: 25%;
+}
+.article footer p{
+	text-align: right;
+	color: #666;
+}
+/*文章模块*/
